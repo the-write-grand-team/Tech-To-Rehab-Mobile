@@ -11,6 +11,7 @@ class SliderArticle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Image.network(
             mapped.image,
@@ -21,7 +22,7 @@ class SliderArticle extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(
               vertical: 5,
-              horizontal: 8,
+              horizontal: 15,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +33,7 @@ class SliderArticle extends StatelessWidget {
                 Text(
                   parse(mapped.title).documentElement.text,
                   style: Theme.of(context).textTheme.headline,
-                  maxLines: 1,
+                  maxLines: 2,
                 ),
                 SizedBox(
                   height: 20,

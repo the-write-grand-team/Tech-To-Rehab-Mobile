@@ -21,13 +21,28 @@ class _MainArticlesListState extends State<MainArticlesList> {
         ? ListViewShimmer()
         : Container(
             width: double.infinity,
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(
+              0.5,
+            ),
             child: Column(
               children: _articles.map((mapped) {
-                return ArticleListViewCard(mapped);
+                return Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ArticleListViewCard(mapped),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Divider(
+                      height: 1,
+                      color: Colors.grey[400],
+                    ),
+                  ],
+                );
               }).toList(),
             ),
           );
   }
 }
-

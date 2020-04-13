@@ -60,6 +60,7 @@ class _HomePageState extends State<HomePage> {
       drawer: AppDrawer(),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(
               height: 10,
@@ -67,6 +68,35 @@ class _HomePageState extends State<HomePage> {
             ArticlesSlider(),
             SizedBox(
               height: 20,
+            ),
+            Container(
+              margin: EdgeInsets.only(
+                left: 15,
+              ),
+              child: Row(
+                children: <Widget>[
+                  Text(
+                    'News Feed',
+                    style: Theme.of(context).textTheme.headline,
+                    textAlign: TextAlign.start,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Divider(
+                      color: Colors.grey,
+                      height: 2,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             MainArticlesList(),
           ],

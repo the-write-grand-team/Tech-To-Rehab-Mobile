@@ -25,13 +25,13 @@ class MyApp extends StatelessWidget {
               ),
               headline: TextStyle(
                 color: Colors.black87,
-                fontSize: 16,
+                fontSize: 17,
                 fontFamily: 'Avenir Next',
                 fontWeight: FontWeight.w700,
                 
               ),
               body1: TextStyle(
-                fontSize: 15,
+                fontSize: 16,
                 fontFamily: 'Source Sans Pro',
                 fontWeight: FontWeight.w400,
                 color: Colors.black87,

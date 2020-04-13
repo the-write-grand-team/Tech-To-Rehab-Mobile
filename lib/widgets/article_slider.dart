@@ -20,7 +20,8 @@ class _ArticlesSliderState extends State<ArticlesSlider> {
         viewportFraction: 0.8,
         autoPlay: false,
         //autoPlayInterval: Duration(seconds: 3),
-        height: 305.0,
+        height: 330.0,
+        initialPage: 2,
         items: _articles.length <= 0
             ? [
                 SliderShimmer(),
