@@ -5,7 +5,7 @@ class ListViewShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 350,
       child: Shimmer.fromColors(
         baseColor: Colors.grey[300],
         highlightColor: Colors.grey[100],
@@ -18,8 +18,8 @@ class ListViewShimmer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    width: 48.0,
-                    height: 48.0,
+                    width: 100.0,
+                    height: 100.0,
                     color: Colors.white,
                   ),
                   const Padding(

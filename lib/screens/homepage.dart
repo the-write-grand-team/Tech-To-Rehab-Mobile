@@ -61,7 +61,13 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 10,
+            ),
             ArticlesSlider(),
+            SizedBox(
+              height: 20,
+            ),
             MainArticlesList(),
           ],
         ),

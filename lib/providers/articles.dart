@@ -41,7 +41,8 @@ class Articles with ChangeNotifier {
       final List<Post> _articles2 = [];
 
       finalPosts.forEach((value) async {
-        var imageGetFunction = getMediaUrl(value['_links']['wp:featuredmedia'][0]['href']);
+        var imageGetFunction =
+            getMediaUrl(value['_links']['wp:featuredmedia'][0]['href']);
 
         return _articles2.add(
           Post(
@@ -51,10 +52,15 @@ class Articles with ChangeNotifier {
             content: value['content']['rendered'],
             excerpt: value['excerpt']['rendered'],
             image: await imageGetFunction,
+            featured: value['powerkit_post_featured'] == null ||
+                    value['powerkit_post_featured'].length <= 0
+                ? false
+                : true,
           ),
         );
       });
       articles = _articles2;
+      print('Featured is ${articles[1]}');
       notifyListeners();
     } catch (error) {
       print(error);
