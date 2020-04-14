@@ -20,24 +20,26 @@ class _MainArticlesListState extends State<MainArticlesList> {
     return _articles.length <= 0
         ? ListViewShimmer()
         : Container(
+            color: Colors.white,
             width: double.infinity,
-            padding: EdgeInsets.all(
-              0.5,
+            padding: EdgeInsets.symmetric(
+              vertical: 0,
+              horizontal: 0.5,
             ),
             child: Column(
               children: _articles.map((mapped) {
                 return Column(
                   children: <Widget>[
-                    SizedBox(
-                      height: 10,
-                    ),
                     ArticleListViewCard(mapped),
                     SizedBox(
                       height: 20,
                     ),
                     Divider(
                       height: 1,
-                      color: Colors.grey[400],
+                      color: Colors.grey[300],
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                   ],
                 );

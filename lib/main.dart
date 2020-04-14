@@ -4,6 +4,7 @@ import './providers/articles.dart';
 import './screens/homepage.dart';
 import 'package:provider/provider.dart';
 import './screens/categories.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,14 +22,19 @@ class MyApp extends StatelessWidget {
                 color: Colors.black87,
                 fontSize: 20,
                 fontFamily: 'Avenir Next',
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w700,
               ),
-              headline: TextStyle(
+              headline: GoogleFonts.lato(
                 color: Colors.black87,
                 fontSize: 17,
+                //fontFamily: 'Avenir Next',
+                fontWeight: FontWeight.w700,
+              ),
+              display1: TextStyle(
+                color: Colors.black87,
+                fontSize: 19,
                 fontFamily: 'Avenir Next',
                 fontWeight: FontWeight.w700,
-                
               ),
               body1: TextStyle(
                 fontSize: 16,

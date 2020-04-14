@@ -57,6 +57,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      backgroundColor: Colors.white,
       drawer: AppDrawer(),
       body: SingleChildScrollView(
         child: Column(
@@ -73,26 +74,10 @@ class _HomePageState extends State<HomePage> {
               margin: EdgeInsets.only(
                 left: 15,
               ),
-              child: Row(
-                children: <Widget>[
-                  Text(
-                    'News Feed',
-                    style: Theme.of(context).textTheme.headline,
-                    textAlign: TextAlign.start,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Expanded(
-                    child: Divider(
-                      color: Colors.grey,
-                      height: 2,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                ],
+              child: Text(
+                'Your Daily Updates',
+                style: Theme.of(context).textTheme.display1,
+                textAlign: TextAlign.start,
               ),
             ),
             SizedBox(
