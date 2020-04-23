@@ -26,7 +26,8 @@ class _MainArticlesListState extends State<MainArticlesList> {
               vertical: 0,
               horizontal: 0.5,
             ),
-            child: Column(
+            child: 
+            Column(
               children: _articles.map((mapped) {
                 return Column(
                   children: <Widget>[

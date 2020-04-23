@@ -20,11 +20,13 @@ class ArticleListViewCard extends StatelessWidget {
           Container(
             decoration:
                 BoxDecoration(border: Border.all(color: Colors.grey[200])),
-            child: Image.network(
-              mapped.image,
+            child: FadeInImage(
+              image: NetworkImage(mapped.image),
               height: 105,
               width: 100,
               fit: BoxFit.cover,
+              placeholder: AssetImage(
+                  'assets/images/imageLoader.gif'),
             ),
           ),
           Expanded(
@@ -38,11 +40,21 @@ class ArticleListViewCard extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 0, left: 15),
-                    child: Text(
-                      'Welcome to Tech To Rehab From Afzaal afridi',
-                      //parse(mapped.title).documentElement.text,
-                      style: Theme.of(context).textTheme.headline,
-                      maxLines: 2,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(
+                          'article',
+                          arguments: {
+                            'id': mapped.id,
+                          },
+                        );
+                      },
+                      child: Text(
+                        'Welcome to Tech To Rehab From Afzaal afridi',
+                        //parse(mapped.title).documentElement.text,
+                        style: Theme.of(context).textTheme.headline,
+                        maxLines: 2,
+                      ),
                     ),
                   ),
                   Padding(

@@ -10,6 +10,10 @@ class SliderArticle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.all(
+        10,
+      ),
+      elevation: 1,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[

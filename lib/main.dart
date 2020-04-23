@@ -5,6 +5,7 @@ import './screens/homepage.dart';
 import 'package:provider/provider.dart';
 import './screens/categories.dart';
 import 'package:google_fonts/google_fonts.dart';
+import './screens/article.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'Avenir Next',
                 fontWeight: FontWeight.w700,
               ),
-              headline: GoogleFonts.lato(
+              headline: GoogleFonts.openSans(
                 color: Colors.black87,
                 fontSize: 17,
                 //fontFamily: 'Avenir Next',
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
           home: HomePage(),
           routes: {
             'categories': (ctx) => CategoriesScreen(),
+            'article': (ctx) => ArticleScreen(),
           }),
     );
   }

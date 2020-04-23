@@ -1,69 +1,65 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        children: <Widget>[
-          Stack(
-            children: <Widget>[
-              FadeInImage(
-                placeholder: NetworkImage(
-                  'https://chesterspirit.com/wp-content/uploads/2016/02/Plain-Grey-Background.jpg',
-                ),
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: 150,
-                image: NetworkImage(
-                  'https://static.vecteezy.com/system/resources/previews/000/268/296/non_2x/abstract-background-vector.jpg',
-                ),
-              ),
-              Container(
-                height: 150,
-                width: double.infinity,
-                alignment: Alignment.bottomLeft,
-                color: Colors.black12,
-                child: FlatButton.icon(
-                  icon: Icon(Icons.account_circle, size: 33),
-                  textColor: Colors.white,
-                  label: Text(
-                    'Welcome, Afzaal Afridi',
-                    softWrap: true,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: 'Avenir Next'),
+      child: ListView(
+        children: [
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.greenAccent[400],
+            ),
+            child: Stack(
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 30,
+                    backgroundImage: NetworkImage(
+                      'https://mpng.subpng.com/20190218/vag/kisspng-runescape-internet-bot-chatbot-avatar-clip-art-an-enterprise-chatbot-builder-platform-botcore-5c6b87f4e91262.2708439915505510289547.jpg',
+                    ),
                   ),
-                  onPressed: () {},
                 ),
-              ),
-            ],
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    width: 200,
+                    child: Text(
+                      'Muhammad Afzaal Afridi Khan Baba',
+                      style: GoogleFonts.lato(
+                        color: Colors.black87,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 17,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerRight + Alignment(0, 0.5),
+                  child: Text(
+                    'Youtuber',
+                    style: GoogleFonts.lato(
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            ),
           ),
-          Column(
-            children: <Widget>[
-              ListTile(
-                leading: Icon(
-                  Icons.home,
-                  color: Colors.blue[700],
-                ),
-                title: Text(
-                  'Home',
-                ),
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.category,
-                  color: Colors.blue[700],
-                ),
-                title: Text(
-                  'Categories',
-                ),
-                onTap: () {
-                  Navigator.of(context).pushNamed('categories');
-                },
-              ),
-            ],
+          ListTile(
+            title: Text('HOME'),
+            leading: Icon(
+              Icons.verified_user,
+            ),
+            subtitle: Text('subtitle'),
+            trailing: Text('trailing'),
           ),
         ],
       ),

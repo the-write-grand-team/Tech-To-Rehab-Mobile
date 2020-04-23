@@ -32,6 +32,14 @@ class Articles with ChangeNotifier {
     // }
   }
 
+  Post fetchArticle(int id) 
+  {
+ 
+      final Post current = articles.firstWhere((post) => post.id == id);
+      print(current);
+      return current;
+  }
+
   Future<void> fetchArticles() async {
     const url = 'https://techtorehab.com/wp-json/wp/v2/posts';
 
@@ -46,6 +54,7 @@ class Articles with ChangeNotifier {
 
         return _articles2.add(
           Post(
+            id: value['id'],
             title: value['title']['rendered'],
             author: value['author'],
             time: value['date'],
