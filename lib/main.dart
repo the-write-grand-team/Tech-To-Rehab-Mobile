@@ -21,20 +21,20 @@ class MyApp extends StatelessWidget {
             textTheme: TextTheme(
               title: TextStyle(
                 color: Colors.black87,
-                fontSize: 20,
-                fontFamily: 'Avenir Next',
-                fontWeight: FontWeight.w700,
-              ),
-              headline: GoogleFonts.openSans(
-                color: Colors.black87,
-                fontSize: 17,
-                //fontFamily: 'Avenir Next',
-                fontWeight: FontWeight.w700,
-              ),
-              display1: TextStyle(
-                color: Colors.black87,
                 fontSize: 19,
                 fontFamily: 'Avenir Next',
+                fontWeight: FontWeight.w400,
+              ),
+              headline: GoogleFonts.roboto(
+                color: Colors.black87,
+                fontSize: 26,
+                //fontFamily: 'Avenir Next',
+                fontWeight: FontWeight.w700,
+                height: 1.5,
+              ),
+              display1: GoogleFonts.openSans(
+                color: Colors.black87,
+                fontSize: 17,
                 fontWeight: FontWeight.w700,
               ),
               body1: TextStyle(
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'Source Sans Pro',
                 fontWeight: FontWeight.w400,
                 color: Colors.black87,
-                height: 1,
+                height: 1.2,
               ),
             ),
           ),

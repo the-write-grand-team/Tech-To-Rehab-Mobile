@@ -33,8 +33,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        iconTheme: IconThemeData(color: Colors.black54),
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(
+          color: Colors.black87,
+        ),
         textTheme: Theme.of(context).textTheme,
         leading: Builder(
           builder: (ctx) => IconButton(
@@ -42,7 +44,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () => Scaffold.of(ctx).openDrawer(),
           ),
         ),
-        elevation: 0.0,
+        elevation: 0.8,
         title: Logo(),
         actions: <Widget>[
           IconButton(
@@ -51,6 +53,12 @@ class _HomePageState extends State<HomePage> {
           ),
           IconButton(
             icon: Icon(Icons.refresh),
+            onPressed: () {
+              return;
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.brightness_2),
             onPressed: () {
               return;
             },

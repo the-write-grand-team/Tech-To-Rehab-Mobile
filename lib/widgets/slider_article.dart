@@ -17,11 +17,14 @@ class SliderArticle extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          Image.network(
-            mapped.image,
-            fit: BoxFit.cover,
+          FadeInImage(
+            width: 600,
             height: 150,
-            width: double.infinity,
+            placeholder: AssetImage('assets/images/imageLoader.gif'),
+            fit: BoxFit.cover,
+            image: NetworkImage(
+              mapped.image,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -36,17 +39,20 @@ class SliderArticle extends StatelessWidget {
                 ),
                 Text(
                   parse(mapped.title).documentElement.text,
-                  style: Theme.of(context).textTheme.headline,
+                  style: Theme.of(context).textTheme.display1,
                   maxLines: 2,
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Text(
                   parse(mapped.excerpt).documentElement.text,
                   style: Theme.of(context).textTheme.body1,
                   maxLines: 2,
                   textAlign: TextAlign.start,
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

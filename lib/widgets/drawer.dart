@@ -9,8 +9,12 @@ class AppDrawer extends StatelessWidget {
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.greenAccent[400],
-            ),
+                color: Colors.blueAccent[700],
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      'https://image.freepik.com/free-vector/abstract-background-overlays-colours_23-2148455347.jpg'),
+                )),
             child: Stack(
               children: <Widget>[
                 Align(
@@ -24,13 +28,13 @@ class AppDrawer extends StatelessWidget {
                   ),
                 ),
                 Align(
-                  alignment: Alignment.centerRight,
+                  alignment: Alignment.centerRight + Alignment(0, -0.1),
                   child: Container(
                     width: 200,
                     child: Text(
                       'Muhammad Afzaal Afridi Khan Baba',
                       style: GoogleFonts.lato(
-                        color: Colors.black87,
+                        color: Colors.white,
                         fontWeight: FontWeight.w700,
                         fontSize: 17,
                       ),
@@ -39,11 +43,11 @@ class AppDrawer extends StatelessWidget {
                   ),
                 ),
                 Align(
-                  alignment: Alignment.centerRight + Alignment(0, 0.5),
+                  alignment: Alignment.centerRight + Alignment(0, 0.3),
                   child: Text(
                     'Youtuber',
                     style: GoogleFonts.lato(
-                      color: Colors.black87,
+                      color: Colors.white60,
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
                     ),
@@ -54,12 +58,22 @@ class AppDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: Text('HOME'),
+            title: Text('Home'),
             leading: Icon(
-              Icons.verified_user,
+              Icons.home,
             ),
-            subtitle: Text('subtitle'),
-            trailing: Text('trailing'),
+          ),
+          ListTile(
+            title: Text('Settings'),
+            leading: Icon(
+              Icons.settings,
+            ),
+          ),
+          ListTile(
+            title: Text('Settings'),
+            leading: Icon(
+              Icons.brightness_2,
+            ),
           ),
         ],
       ),

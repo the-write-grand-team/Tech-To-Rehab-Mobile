@@ -8,14 +8,26 @@ class Logo extends StatelessWidget {
         Text(
           'Tech'.toUpperCase(),
           style: TextStyle(
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w400,
           ),
         ),
         Text('To'.toUpperCase()),
         Text(
           'Rehab'.toUpperCase(),
           style: TextStyle(
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        SizedBox(
+          width: 10,
+        ),
+        Flexible(
+          child: Text(
+            'MAG'.toUpperCase(),
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+            ),
+            overflow: TextOverflow.fade,
           ),
         ),
       ],

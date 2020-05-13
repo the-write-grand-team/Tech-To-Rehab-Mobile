@@ -50,9 +50,9 @@ class ArticleListViewCard extends StatelessWidget {
                         );
                       },
                       child: Text(
-                        'Welcome to Tech To Rehab From Afzaal afridi',
-                        //parse(mapped.title).documentElement.text,
-                        style: Theme.of(context).textTheme.headline,
+                        // 'Welcome to Tech To Rehab From Afzaal afridi',
+                        parse(mapped.title).documentElement.text,
+                        style: Theme.of(context).textTheme.display1,
                         maxLines: 2,
                       ),
                     ),
